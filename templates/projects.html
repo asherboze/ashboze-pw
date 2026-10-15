@@ -1,12 +1,13 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>-->
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
     <title>Project 2</title>
-    <script src="./script/projects.js" defer></script>
+    <script src="{% static 'projects.js' %}" defer></script>
   </head>
   <body>
     <main>
@@ -47,14 +48,15 @@
           </article>
           <article>
             <button class="project-card-button">
-              <h3>In The Times Of Dinosaurs and Vinyl</h3>
-              <p>This is a live set that was recorded.</p>
+              <h3>Company Website</h3>
+              <p></p>
             </button>
           </article>
         </div>
         <div class="hidden-modal">
           <div class="modal-content">
             <button class="undo">x</button>
+            <iframe></iframe>
             <p id="ogMessage">Yeth I am a modal and I was hidden!</p>
           </div>
         </div>
@@ -64,9 +66,11 @@
       <div class="hidden-nav-popup">
         <button id="close-nav">X</button>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html" aria-current="page">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li>
+            <a href="{% url 'projects' %}" aria-current="page">Projects</a>
+          </li>
+          <li><a href="{% url 'resume' %}">Resume</a></li>
         </ul>
       </div>
 

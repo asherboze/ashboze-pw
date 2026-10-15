@@ -1,24 +1,25 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
     <title>project-3</title>
-    <script src="./script/script.js" defer></script>
+    <script src="{% static 'script.js' %}" defer></script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <img
         id="hero-image"
-        src="./images/headshot-left-to-right.jpg"
+        src="{% static 'headshot-left-to-right.jpg' %}"
         alt="Headshot of Asher Boze"
       />
       <h1>Hello! My name is</h1>
       <h2>Asher</h2>
       <h3>Boze</h3>
-      <a href="projects.html" id="call-to-action">Click here to see my work!</a>
+      <a href="{% url 'projects' %}" id="call-to-action">Click here to see my work!</a>
     </header>
     <main id="main-content">
       <section id="about-me">
@@ -51,15 +52,19 @@
       <div class="hidden-nav-popup">
         <button id="close-nav">X</button>
         <ul aria-label="Main navigation">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
+          <li><a href="{% url 'index' %}" aria-current="page">Home</a></li>
+          <li><a href="{% url 'projects' %}">Projects</a></li>
+          <li><a href="{% url 'resume' %}">Resume</a></li>
         </ul>
       </div>
 
       <div class="button">
         <button id="nav-toggle">>>Navigation</button>
       </div>
+
+      <video controls>
+        <source src="{% static 'Say It Aint So.mp4' %}" type="video/mp4" />
+      </video>
 
       <footer id="contact-me">
         <h5>Contact Me</h5>

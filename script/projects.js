@@ -11,6 +11,7 @@ const messages = [
     "I composed a song called Leavetaking for my High School Graduation. Click this link to watch it:  https://youtu.be/B56jiHYLMe0?si=9muhvlJZD6j7rLVM",
     "This is a recent composition of mine. The lyrics are inspired by a used, discarded notebook I picked up in one of my classes. I will post this on my youtube channel later.",
     "I performed this set in between the fall semester and the spring semester. I've been meaning to post it, but I haven't got it edited yet, so I will put up the link when I finish that."
+
 ];
 
 for (let x = 0; x < buttons.length; x++) {
